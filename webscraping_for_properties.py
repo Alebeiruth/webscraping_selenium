@@ -26,7 +26,7 @@ import time
 # Set up the Chrome driver
 navegador = webdriver.Chrome()
 
-# Open the Medium homepage
+# Open the Chaves na mão homepage
 navegador.get("https://www.chavesnamao.com.br/")
 
 # Wait until the first button is clickable and click it
@@ -35,33 +35,27 @@ try:
         EC.element_to_be_clickable((By.XPATH, '//*[@id="rent-realestate"]'))
     )
     ActionChains(navegador).move_to_element(link2).click().perform()
-
-    # Wait until the second link is clickable and click it
+    
     link3 = WebDriverWait(navegador, 10).until(
         EC.element_to_be_clickable((By.XPATH, '//*[@id="ti-4"]'))
     )
     ActionChains(navegador).move_to_element(link3).click().perform()
-
-    # Wait until the fourth link is clickable and click it
+    
     link4 = WebDriverWait(navegador, 10).until(
         EC.element_to_be_clickable((By.XPATH, '//*[@id="home-filter-onboarding"]/div[2]/div[2]/button'))
     )
     ActionChains(navegador).move_to_element(link4).click().perform()
-
-    # Locate the input field and enter text
+    
     link5 = WebDriverWait(navegador, 10).until(
         EC.element_to_be_clickable((By.XPATH, '//*[@id="city"]'))
-        # Replace with the actual XPath of the input field
     )
     link5.send_keys("Curitiba")
 
-    # Wait until the fourth link is clickable and click it
     link6 = WebDriverWait(navegador, 10).until(
         EC.element_to_be_clickable((By.XPATH, '//*[@id="cityList"]/li[1]'))
     )
     ActionChains(navegador).move_to_element(link6).click().perform()
 
-    # Wait until the fourth link is clickable and click it
     link7 = WebDriverWait(navegador, 10).until(
         EC.element_to_be_clickable((By.XPATH, '//*[@id="nbList"]/li[31]'))
     )
@@ -118,11 +112,11 @@ try:
     ActionChains(navegador).move_to_element(link17).click().perform()
 
     # Save the last URL to a file
-    with open('last_url_site_chaves_na_mao.txt', 'w') as file:
+    with open('url_site_chaves_na_mao.txt', 'w') as file:
         file.write(navegador.current_url)
 
     # Keep the browser open for a while to see the results
-    time.sleep(90)  # Keep the browser open for 60 seconds
+    time.sleep(90)  # Keep the browser open for 90 seconds
 
 finally:
     # Close the browser after the operation
