@@ -1,0 +1,1 @@
+Esse codigo foi idealizado para uso pessoal, com a finalidade de encontrar imoveis para locação na cidade de Curitiba/PR, em alguns bairros existentes na cidade, o site escolhido para busca foi chaves na mão. O codigo possui uma lista de etapas de como foi seguido o passo a passo desta busca. 
